@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   ChevronRight,
   Clock,
-  HeartHandshake,
   MapPin,
   Menu,
   MessageCircle,
@@ -428,8 +427,12 @@ export default function App() {
                       장유리나 대표
                     </h3>
                   </div>
-                  <div className="mx-auto flex size-48 items-center justify-center rounded-full border-8 border-white bg-[#0e2442] text-white shadow-2xl sm:size-60">
-                    <HeartHandshake size={78} />
+                  <div className="relative mx-auto h-72 w-56 overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl sm:h-80 sm:w-64">
+                    <img
+                      src="/instructor-jang.png"
+                      alt="장유리나 대표"
+                      className="h-full w-full object-cover object-top"
+                    />
                   </div>
                   <div className="rounded-3xl bg-white/92 p-5 shadow-xl backdrop-blur">
                     <p className="text-lg font-extrabold text-[#0e2442]">
@@ -478,6 +481,13 @@ export default function App() {
 
           <div className="mt-10 grid gap-7 lg:grid-cols-2">
             <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-white shadow-lg shadow-slate-100">
+                <img
+                  src="/instructor-moon.png"
+                  alt="문정은 강사"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                 <div>
                   <span className="text-sm font-extrabold text-sky-600">
@@ -534,6 +544,13 @@ export default function App() {
             </div>
 
             <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-[#fbfdff] shadow-lg shadow-slate-100">
+                <img
+                  src="/instructor-cho.png"
+                  alt="조은준 강사"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                 <div>
                   <span className="text-sm font-extrabold text-sky-600">
@@ -590,6 +607,13 @@ export default function App() {
             </div>
 
             <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-white shadow-lg shadow-slate-100">
+                <img
+                  src="/instructor-lee.png"
+                  alt="이채범 강사"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                 <div>
                   <span className="text-sm font-extrabold text-sky-600">
@@ -646,6 +670,13 @@ export default function App() {
             </div>
 
             <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-[#fbfdff] shadow-lg shadow-slate-100">
+                <img
+                  src="/instructor-huh.png"
+                  alt="허유진 강사"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                 <div>
                   <span className="text-sm font-extrabold text-sky-600">
