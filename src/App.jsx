@@ -71,10 +71,14 @@ export default function App() {
   ];
 
   const careers = [
-    "경제방송 진행 경력",
-    "스피치·커뮤니케이션 전문 강사",
-    "한국어교육대학원 석사",
-    "다수 기업·기관 스피치 출강",
+    "現 디데이스피치 아카데미 대표강사",
+    "現 서울특별시 컬링 협회 대변인",
+    "前 연합뉴스TV 시민리포터",
+    "前 이데일리TV 아나운서",
+    "前 토마토TV 아나운서",
+    "前 기상청 기상전문기자",
+    "前 경기도광주시청 취재기자",
+    "前 공공기관 청년센터 스피치 강의 및 면접 특강 다수 진행",
   ];
 
   const reviews = [
@@ -330,38 +334,73 @@ export default function App() {
       </section>
 
       <section id="강사진" className="px-5 py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="rounded-[2rem] bg-gradient-to-br from-[#e5f6ff] via-white to-[#e5f8f4] p-6 shadow-2xl shadow-slate-100">
-            <div className="aspect-[4/5] rounded-[1.5rem] border border-white bg-white/55 p-7">
-              <div className="flex h-full flex-col items-center justify-center text-center">
-                <div className="flex size-36 items-center justify-center rounded-full bg-[#0e2442] text-white shadow-xl">
-                  <HeartHandshake size={62} />
-                </div>
-                <p className="mt-8 text-lg font-extrabold">대표 프로필 이미지</p>
-                <p className="mt-2 text-sm text-slate-500">Speech Director</p>
-              </div>
-            </div>
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12">
+            <span className="text-sm font-extrabold text-sky-600">MENTOR</span>
+            <h2 className="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+              스피치 멘토 소개
+            </h2>
           </div>
 
-          <div>
-            <span className="text-sm font-extrabold text-sky-600">DIRECTOR</span>
-            <h2 className="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
-              아이의 잠재력을 이끌어내는 교육
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              방송 진행 경험과 스피치 교육 노하우를 바탕으로 아이 한 명 한 명의
-              성향을 이해하고, 자신만의 방식으로 표현할 수 있도록 지도합니다.
-            </p>
-            <div className="mt-9 grid gap-4 sm:grid-cols-2">
-              {careers.map((career) => (
-                <div
-                  key={career}
-                  className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-white p-4 shadow-lg shadow-slate-100"
-                >
-                  <Award className="mt-0.5 shrink-0 text-sky-600" size={20} />
-                  <span className="font-bold leading-6">{career}</span>
+          <div className="grid items-stretch gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="rounded-[2rem] bg-white p-5 shadow-2xl shadow-slate-100">
+              <div className="relative flex min-h-[34rem] overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#fff7ed] via-white to-[#e5f8f4] p-7">
+                <div className="absolute left-0 top-12 h-60 w-4 rounded-r-full bg-[#1f3c88]" />
+                <div className="absolute bottom-24 left-8 right-8 h-52 rounded-[1.4rem] bg-[#f59e0b]" />
+                <div className="relative z-10 flex w-full flex-col justify-between">
+                  <div>
+                    <p className="text-sm font-extrabold text-[#f59e0b]">
+                      Speech Mentor
+                    </p>
+                    <h3 className="mt-4 text-3xl font-extrabold text-[#0e2442]">
+                      장유리나 대표
+                    </h3>
+                  </div>
+                  <div className="mx-auto flex size-48 items-center justify-center rounded-full border-8 border-white bg-[#0e2442] text-white shadow-2xl sm:size-60">
+                    <HeartHandshake size={78} />
+                  </div>
+                  <div className="rounded-3xl bg-white/92 p-5 shadow-xl backdrop-blur">
+                    <p className="text-lg font-extrabold text-[#0e2442]">
+                      실전에서 통하는 스피치
+                    </p>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">
+                      방송·행사·강의 경력을 바탕으로 아이가 자기 생각을
+                      또렷하고 자연스럽게 표현하도록 지도합니다.
+                    </p>
+                  </div>
                 </div>
-              ))}
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-2xl shadow-slate-100 sm:p-9 lg:p-10">
+              <div className="inline-flex rounded-xl bg-[#f59e0b] px-4 py-2 text-sm font-black uppercase text-white shadow-lg shadow-amber-100">
+                Slogan
+              </div>
+              <blockquote className="mt-5 text-2xl font-extrabold leading-relaxed text-[#0e2442] sm:text-3xl">
+                “실전에서 통하는 스피치, 방송국 아나운서가 책임집니다”
+              </blockquote>
+              <p className="mt-5 text-lg font-bold leading-8 text-slate-600">
+                방송·행사·강의 총 10년 경력의 실전형 스피치 전문가가
+                말하기의 기본기부터 발표 태도, 면접 답변, 자기소개까지
+                아이의 눈높이에 맞춰 코칭합니다.
+              </p>
+
+              <div className="mt-10 inline-flex rounded-xl bg-[#f59e0b] px-4 py-2 text-sm font-black uppercase text-white shadow-lg shadow-amber-100">
+                History
+              </div>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {careers.map((career) => (
+                  <div
+                    key={career}
+                    className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-[#fbfdff] p-4 shadow-sm"
+                  >
+                    <Award className="mt-0.5 shrink-0 text-[#f59e0b]" size={19} />
+                    <span className="text-sm font-bold leading-6 text-slate-700">
+                      {career}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
