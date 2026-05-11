@@ -446,12 +446,23 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-3xl bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 text-center">
+            <a
+              href="https://naver.me/xk1KuIPu"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 flex aspect-[16/9] items-center justify-center rounded-3xl bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 p-6 text-center transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-100"
+              aria-label="네이버지도에서 디데이스피치 위치 보기"
+            >
               <div>
-                <MapPin className="mx-auto mb-3 text-[#0e2442]" size={34} />
-                <p className="font-extrabold text-[#0e2442]">지도 placeholder</p>
+                <MapPin className="mx-auto mb-4 text-[#0e2442]" size={38} />
+                <p className="text-xl font-extrabold text-[#0e2442]">
+                  네이버지도에서 보기
+                </p>
+                <p className="mt-2 text-sm font-semibold text-slate-500">
+                  길찾기와 주변 교통 정보를 확인하세요
+                </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
