@@ -95,6 +95,38 @@ export default function App() {
     "진로 토크: 말로 그리는 나의 미래",
   ];
 
+  const moonInstructorHighlights = [
+    "아나운서 스피치",
+    "방송·행사 진행",
+    "현장형 말하기",
+    "인성교육 커뮤니케이션",
+  ];
+
+  const moonCareers = [
+    "現 디데이스피치 아카데미 대표강사",
+    "前 서울경제TV 아나운서",
+    "前 NBN TV, 팍스경제TV 아나운서",
+    "前 경기남부경찰청 직무 교육 강사",
+    "前 경기남부경찰청 인성교육 강사",
+    "방송·행사·강의 총 10년 방송 경력",
+  ];
+
+  const choInstructorHighlights = [
+    "초·중·고 스피치",
+    "아나운서 발성",
+    "발표 자신감",
+    "역사 기반 표현력",
+  ];
+
+  const choCareers = [
+    "現 디데이스피치 아카데미 대표강사",
+    "前 한국경제TV 아나운서",
+    "前 딜사이트경제TV 아나운서",
+    "역사 교원 자격증 보유",
+    "초·중·고 대상 스피치 강의 경력 7년",
+    "방송·행사·강의 총 10년 방송 경력",
+  ];
+
   const huhInstructorHighlights = [
     "경제 뉴스 스피치",
     "방송 아나운싱",
@@ -109,22 +141,6 @@ export default function App() {
     "한국남동발전 공개 채용 필기전형 방송 아나운서",
     "한국중부발전 공개 채용 필기전형 방송 아나운서",
     "아나운서 심화 과정 및 경제 전문 클래스 수료",
-  ];
-
-  const ohInstructorHighlights = [
-    "청소년 자기관리",
-    "목표설정 코칭",
-    "재테크·투자 기초",
-    "경제 관점 형성",
-  ];
-
-  const ohCareers = [
-    "거창여자고 수험생 자기관리법·목표설정법 강의",
-    "이데일리 <대가들의 투자비법> 강의",
-    "前 100명의 수험생 컨설턴트",
-    "前 이데일리 주식투자 전문가",
-    "주식투자전문가 프리랜서 강의 경력",
-    "증권투자권유대행인",
   ];
 
   const reviews = [
@@ -454,7 +470,119 @@ export default function App() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-7 lg:grid-cols-3">
+          <div className="mt-10 grid gap-7 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                <div>
+                  <span className="text-sm font-extrabold text-sky-600">
+                    INSTRUCTOR
+                  </span>
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
+                    문정은 강사
+                  </h3>
+                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+                    “아나운서처럼 말하라, 현장에선 통한다”는 기준으로
+                    방송 현장의 전달력과 실전 감각을 아이들의 발표와 면접
+                    수업에 연결합니다.
+                  </p>
+                </div>
+                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-amber-50 text-[#f59e0b]">
+                  <Mic2 size={38} />
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 강의 분야
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {moonInstructorHighlights.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-[#f3f7fb] px-4 py-2 text-sm font-bold text-slate-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 경력
+                </p>
+                <div className="mt-5 grid gap-3">
+                  {moonCareers.map((career) => (
+                    <div key={career} className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="mt-0.5 shrink-0 text-teal-500"
+                        size={19}
+                      />
+                      <span className="text-sm font-bold leading-6 text-slate-700">
+                        {career}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                <div>
+                  <span className="text-sm font-extrabold text-sky-600">
+                    INSTRUCTOR
+                  </span>
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
+                    조은준 강사
+                  </h3>
+                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+                    방송 아나운서 경력과 초·중·고 스피치 강의 경험을 바탕으로
+                    아이들이 또렷한 발성, 안정적인 자세, 자신 있는 표현을
+                    익히도록 지도합니다.
+                  </p>
+                </div>
+                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-amber-50 text-[#f59e0b]">
+                  <Award size={38} />
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl bg-[#fbfdff] p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 강의 분야
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {choInstructorHighlights.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-3xl bg-[#fbfdff] p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 경력
+                </p>
+                <div className="mt-5 grid gap-3">
+                  {choCareers.map((career) => (
+                    <div key={career} className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="mt-0.5 shrink-0 text-teal-500"
+                        size={19}
+                      />
+                      <span className="text-sm font-bold leading-6 text-slate-700">
+                        {career}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                 <div>
@@ -552,61 +680,6 @@ export default function App() {
                 </p>
                 <div className="mt-5 grid gap-3">
                   {huhCareers.map((career) => (
-                    <div key={career} className="flex items-start gap-3">
-                      <CheckCircle2
-                        className="mt-0.5 shrink-0 text-teal-500"
-                        size={19}
-                      />
-                      <span className="text-sm font-bold leading-6 text-slate-700">
-                        {career}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
-              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end lg:flex-col lg:items-start">
-                <div>
-                  <span className="text-sm font-extrabold text-sky-600">
-                    SPECIAL LECTURER
-                  </span>
-                  <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
-                    오진승 강사
-                  </h3>
-                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
-                    자기관리와 목표설정, 경제·재테크 기초를 연결해 청소년과
-                    청년이 스스로 기준을 세우고 성장하도록 돕는 특강 강사입니다.
-                  </p>
-                </div>
-                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-teal-50 text-teal-600">
-                  <Target size={38} />
-                </div>
-              </div>
-
-              <div className="mt-8 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
-                <p className="text-sm font-extrabold text-[#f59e0b]">
-                  주요 강의 분야
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {ohInstructorHighlights.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-[#f3f7fb] px-4 py-2 text-sm font-bold text-slate-700"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-5 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
-                <p className="text-sm font-extrabold text-[#f59e0b]">
-                  주요 경력
-                </p>
-                <div className="mt-5 grid gap-3">
-                  {ohCareers.map((career) => (
                     <div key={career} className="flex items-start gap-3">
                       <CheckCircle2
                         className="mt-0.5 shrink-0 text-teal-500"
