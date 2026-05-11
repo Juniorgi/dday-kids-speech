@@ -94,6 +94,22 @@ export default function App() {
     "진로 토크: 말로 그리는 나의 미래",
   ];
 
+  const huhInstructorHighlights = [
+    "경제 뉴스 스피치",
+    "방송 아나운싱",
+    "면접 진행·안내 멘트",
+    "전시해설 커뮤니케이션",
+  ];
+
+  const huhCareers = [
+    "팍스경제TV 경제캐스터",
+    "현대모터스튜디오 전시해설 도슨트",
+    "한국도로교통공단 공개 채용 필기전형 방송 아나운서",
+    "한국남동발전 공개 채용 필기전형 방송 아나운서",
+    "한국중부발전 공개 채용 필기전형 방송 아나운서",
+    "아나운서 심화 과정 및 경제 전문 클래스 수료",
+  ];
+
   const reviews = [
     "발표를 너무 무서워했는데, 이제는 친구들 앞에서도 자신 있게 말해요.",
     "자기소개가 자연스러워지고 목소리도 커져서 면접에서 좋은 결과가 있었어요.",
@@ -207,63 +223,6 @@ export default function App() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
-            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-              <div>
-                <span className="text-sm font-extrabold text-sky-600">
-                  INSTRUCTOR
-                </span>
-                <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
-                  이채범 강사
-                </h3>
-                <p className="mt-4 max-w-2xl text-base font-semibold leading-7 text-slate-600">
-                  공감 대화법을 바탕으로 아이들이 말하기 상황을 편안하게
-                  받아들이고, 자기 생각을 자신 있게 표현할 수 있도록 돕는
-                  커뮤니케이션 강사입니다.
-                </p>
-              </div>
-              <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-sky-50 text-sky-700">
-                <MessageCircle size={38} />
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
-                <p className="text-sm font-extrabold text-[#f59e0b]">
-                  주요 강의 분야
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {leeInstructorHighlights.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-[#f3f7fb] px-4 py-2 text-sm font-bold text-slate-700"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
-                <p className="text-sm font-extrabold text-[#f59e0b]">
-                  대표 강의
-                </p>
-                <div className="mt-5 grid gap-3">
-                  {leeLectures.map((lecture) => (
-                    <div key={lecture} className="flex items-start gap-3">
-                      <CheckCircle2
-                        className="mt-0.5 shrink-0 text-teal-500"
-                        size={19}
-                      />
-                      <span className="text-sm font-bold leading-6 text-slate-700">
-                        {lecture}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -471,6 +430,119 @@ export default function App() {
                     </span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-7 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                <div>
+                  <span className="text-sm font-extrabold text-sky-600">
+                    INSTRUCTOR
+                  </span>
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
+                    이채범 강사
+                  </h3>
+                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+                    공감 대화법을 바탕으로 아이들이 말하기 상황을 편안하게
+                    받아들이고, 자기 생각을 자신 있게 표현할 수 있도록 돕는
+                    커뮤니케이션 강사입니다.
+                  </p>
+                </div>
+                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-sky-50 text-sky-700">
+                  <MessageCircle size={38} />
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 강의 분야
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {leeInstructorHighlights.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-[#f3f7fb] px-4 py-2 text-sm font-bold text-slate-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  대표 강의
+                </p>
+                <div className="mt-5 grid gap-3">
+                  {leeLectures.map((lecture) => (
+                    <div key={lecture} className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="mt-0.5 shrink-0 text-teal-500"
+                        size={19}
+                      />
+                      <span className="text-sm font-bold leading-6 text-slate-700">
+                        {lecture}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                <div>
+                  <span className="text-sm font-extrabold text-sky-600">
+                    INSTRUCTOR
+                  </span>
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
+                    허유진 강사
+                  </h3>
+                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+                    경제캐스터와 방송 아나운서 경험을 바탕으로 정확한 전달력,
+                    안정적인 발성, 상황에 맞는 말하기 태도를 코칭합니다.
+                  </p>
+                </div>
+                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-amber-50 text-[#f59e0b]">
+                  <Mic2 size={38} />
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl bg-[#fbfdff] p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 강의 분야
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {huhInstructorHighlights.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-3xl bg-[#fbfdff] p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 경력
+                </p>
+                <div className="mt-5 grid gap-3">
+                  {huhCareers.map((career) => (
+                    <div key={career} className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="mt-0.5 shrink-0 text-teal-500"
+                        size={19}
+                      />
+                      <span className="text-sm font-bold leading-6 text-slate-700">
+                        {career}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
