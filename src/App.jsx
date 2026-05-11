@@ -450,17 +450,30 @@ export default function App() {
               href="https://naver.me/xk1KuIPu"
               target="_blank"
               rel="noreferrer"
-              className="mt-8 flex aspect-[16/9] items-center justify-center rounded-3xl bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 p-6 text-center transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-100"
+              className="group relative mt-8 block aspect-[16/9] overflow-hidden rounded-3xl bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 text-center transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-100"
               aria-label="네이버지도에서 디데이스피치 위치 보기"
             >
-              <div>
-                <MapPin className="mx-auto mb-4 text-[#0e2442]" size={38} />
-                <p className="text-xl font-extrabold text-[#0e2442]">
-                  네이버지도에서 보기
-                </p>
-                <p className="mt-2 text-sm font-semibold text-slate-500">
-                  길찾기와 주변 교통 정보를 확인하세요
-                </p>
+              <img
+                src="/naver-map.png"
+                alt="디데이스피치 네이버지도 위치"
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                onError={(event) => {
+                  event.currentTarget.style.display = "none";
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0e2442]/35 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3 rounded-2xl bg-white/92 px-4 py-3 text-left shadow-lg backdrop-blur">
+                <div>
+                  <p className="text-sm font-extrabold text-[#0e2442]">
+                    디데이스피치
+                  </p>
+                  <p className="mt-1 text-xs font-semibold text-slate-500">
+                    네이버지도에서 길찾기
+                  </p>
+                </div>
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#0e2442] text-white">
+                  <MapPin size={20} />
+                </span>
               </div>
             </a>
           </div>
