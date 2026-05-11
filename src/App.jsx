@@ -481,11 +481,11 @@ export default function App() {
 
           <div className="mt-10 grid gap-7 lg:grid-cols-2">
             <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
-              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-white shadow-lg shadow-slate-100">
+              <div className="mb-7 h-80 overflow-hidden rounded-3xl bg-gradient-to-br from-white via-sky-50 to-amber-50 shadow-lg shadow-slate-100 sm:h-96 lg:h-[26rem]">
                 <img
                   src="/instructor-moon.png"
                   alt="문정은 강사"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-contain object-bottom"
                 />
               </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -544,11 +544,11 @@ export default function App() {
             </div>
 
             <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
-              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-[#fbfdff] shadow-lg shadow-slate-100">
+              <div className="mb-7 h-80 overflow-hidden rounded-3xl bg-gradient-to-br from-white via-sky-50 to-amber-50 shadow-lg shadow-slate-100 sm:h-96 lg:h-[26rem]">
                 <img
                   src="/instructor-cho.png"
                   alt="조은준 강사"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-contain object-bottom"
                 />
               </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -607,11 +607,11 @@ export default function App() {
             </div>
 
             <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
-              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-white shadow-lg shadow-slate-100">
+              <div className="mb-7 h-80 overflow-hidden rounded-3xl bg-gradient-to-br from-white via-sky-50 to-amber-50 shadow-lg shadow-slate-100 sm:h-96 lg:h-[26rem]">
                 <img
                   src="/instructor-lee.png"
                   alt="이채범 강사"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-contain object-bottom"
                 />
               </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -670,11 +670,11 @@ export default function App() {
             </div>
 
             <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
-              <div className="mb-7 h-72 overflow-hidden rounded-3xl bg-[#fbfdff] shadow-lg shadow-slate-100">
+              <div className="mb-7 h-80 overflow-hidden rounded-3xl bg-gradient-to-br from-white via-sky-50 to-amber-50 shadow-lg shadow-slate-100 sm:h-96 lg:h-[26rem]">
                 <img
                   src="/instructor-huh.png"
                   alt="허유진 강사"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-contain object-bottom"
                 />
               </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
