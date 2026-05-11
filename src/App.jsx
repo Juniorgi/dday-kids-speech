@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 
 export default function App() {
+  const kakaoChatUrl = "https://open.kakao.com/o/smjiKjui";
+  const phoneUrl = "tel:01022297378";
   const navItems = ["홈", "프로그램", "수업소개", "강사진", "수강후기", "상담예약"];
 
   const strengths = [
@@ -110,6 +112,22 @@ export default function App() {
     "아나운서 심화 과정 및 경제 전문 클래스 수료",
   ];
 
+  const ohInstructorHighlights = [
+    "청소년 자기관리",
+    "목표설정 코칭",
+    "재테크·투자 기초",
+    "경제 관점 형성",
+  ];
+
+  const ohCareers = [
+    "거창여자고 수험생 자기관리법·목표설정법 강의",
+    "이데일리 <대가들의 투자비법> 강의",
+    "前 100명의 수험생 컨설턴트",
+    "前 이데일리 주식투자 전문가",
+    "주식투자전문가 프리랜서 강의 경력",
+    "증권투자권유대행인",
+  ];
+
   const reviews = [
     "발표를 너무 무서워했는데, 이제는 친구들 앞에서도 자신 있게 말해요.",
     "자기소개가 자연스러워지고 목소리도 커져서 면접에서 좋은 결과가 있었어요.",
@@ -143,7 +161,9 @@ export default function App() {
 
           <div className="flex items-center gap-3">
             <a
-              href="#상담예약"
+              href={kakaoChatUrl}
+              target="_blank"
+              rel="noreferrer"
               className="hidden rounded-full bg-[#0e2442] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-200 transition hover:-translate-y-0.5 hover:bg-[#17375f] sm:inline-flex"
             >
               체험수업 신청
@@ -175,14 +195,18 @@ export default function App() {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#상담예약"
+                href={kakaoChatUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0e2442] px-7 py-4 text-base font-bold text-white shadow-xl shadow-slate-200 transition hover:-translate-y-0.5 hover:bg-[#17375f]"
               >
                 체험수업 신청
                 <ChevronRight size={18} />
               </a>
               <a
-                href="#상담예약"
+                href={kakaoChatUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-bold text-[#0e2442] shadow-sm transition hover:-translate-y-0.5 hover:border-sky-200"
               >
                 상담 예약하기
@@ -434,7 +458,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-7 lg:grid-cols-2">
+          <div className="mt-10 grid gap-7 lg:grid-cols-3">
             <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                 <div>
@@ -545,6 +569,61 @@ export default function App() {
                 </div>
               </div>
             </div>
+
+            <div className="rounded-[2rem] border border-slate-100 bg-[#fbfdff] p-7 shadow-xl shadow-slate-100 sm:p-9">
+              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end lg:flex-col lg:items-start">
+                <div>
+                  <span className="text-sm font-extrabold text-sky-600">
+                    SPECIAL LECTURER
+                  </span>
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
+                    오진승 강사
+                  </h3>
+                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+                    자기관리와 목표설정, 경제·재테크 기초를 연결해 청소년과
+                    청년이 스스로 기준을 세우고 성장하도록 돕는 특강 강사입니다.
+                  </p>
+                </div>
+                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-teal-50 text-teal-600">
+                  <Target size={38} />
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 강의 분야
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {ohInstructorHighlights.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-[#f3f7fb] px-4 py-2 text-sm font-bold text-slate-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-3xl bg-white p-6 shadow-lg shadow-slate-100">
+                <p className="text-sm font-extrabold text-[#f59e0b]">
+                  주요 경력
+                </p>
+                <div className="mt-5 grid gap-3">
+                  {ohCareers.map((career) => (
+                    <div key={career} className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="mt-0.5 shrink-0 text-teal-500"
+                        size={19}
+                      />
+                      <span className="text-sm font-bold leading-6 text-slate-700">
+                        {career}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -592,7 +671,9 @@ export default function App() {
               {["체험수업 신청", "상담 예약하기", "전화 상담"].map((label, index) => (
                 <a
                   key={label}
-                  href={index === 2 ? "tel:0212345678" : "#상담예약"}
+                  href={index === 2 ? phoneUrl : kakaoChatUrl}
+                  target={index === 2 ? undefined : "_blank"}
+                  rel={index === 2 ? undefined : "noreferrer"}
                   className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-extrabold transition hover:-translate-y-0.5 ${
                     index === 0
                       ? "bg-white text-[#0e2442]"
