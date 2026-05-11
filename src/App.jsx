@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   ChevronRight,
   Clock,
-  GraduationCap,
   HeartHandshake,
   MapPin,
   Menu,
@@ -217,31 +216,28 @@ export default function App() {
           <div className="relative">
             <div className="absolute -right-10 top-8 hidden h-28 w-28 rounded-full bg-teal-100/60 blur-2xl lg:block" />
             <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#dff4ff] via-[#f8fbff] to-[#dff7ef] p-6 shadow-2xl shadow-slate-200/80">
-              <div className="aspect-[4/3] rounded-[1.45rem] border border-white/80 bg-gradient-to-br from-white/75 via-sky-100/70 to-teal-100/80 p-7">
-                <div className="flex h-full flex-col justify-between rounded-[1.2rem] border border-white/70 bg-white/45 p-6">
-                  <div className="flex items-center justify-between">
-                    <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0e2442] shadow-sm">
-                      발표하는 초등학생 이미지
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-white/80 bg-sky-50">
+                <img
+                  src="/hero-student-speech.png"
+                  alt="마이크를 들고 발표하는 초등학생"
+                  className="h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e2442]/35 via-transparent to-white/5" />
+                <div className="absolute left-5 top-5 rounded-full bg-white/92 px-4 py-2 text-sm font-bold text-[#0e2442] shadow-sm backdrop-blur">
+                  발표 자신감을 키우는 스피치 클래스
+                </div>
+                <div className="absolute right-5 top-5 flex size-12 items-center justify-center rounded-full bg-[#0e2442] text-white shadow-lg">
+                  <Mic2 size={22} />
+                </div>
+                <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 gap-3">
+                  {["Voice", "Mind", "Stage"].map((label) => (
+                    <span
+                      key={label}
+                      className="rounded-2xl bg-white/88 px-3 py-3 text-center text-xs font-bold text-[#0e2442] shadow-sm backdrop-blur"
+                    >
+                      {label}
                     </span>
-                    <span className="flex size-12 items-center justify-center rounded-full bg-[#0e2442] text-white shadow-lg">
-                      <Mic2 size={22} />
-                    </span>
-                  </div>
-                  <div className="mx-auto flex size-44 items-center justify-center rounded-full bg-white/80 shadow-xl shadow-sky-100 sm:size-56">
-                    <div className="flex size-28 items-center justify-center rounded-full bg-gradient-to-br from-sky-200 to-teal-100 text-[#0e2442] sm:size-36">
-                      <GraduationCap size={58} />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    {["Voice", "Mind", "Stage"].map((label) => (
-                      <span
-                        key={label}
-                        className="rounded-2xl bg-white/80 px-3 py-3 text-center text-xs font-bold text-slate-600 shadow-sm"
-                      >
-                        {label}
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
