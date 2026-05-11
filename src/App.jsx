@@ -450,17 +450,10 @@ export default function App() {
               href="https://naver.me/xk1KuIPu"
               target="_blank"
               rel="noreferrer"
-              className="group relative mt-8 block aspect-[16/9] overflow-hidden rounded-3xl bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 text-center transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-100"
+              className="group relative mt-8 block aspect-[16/9] overflow-hidden rounded-3xl bg-[url('/naver-map.png')] bg-cover bg-center text-center transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-100"
               aria-label="네이버지도에서 디데이스피치 위치 보기"
             >
-              <img
-                src="/naver-map.png"
-                alt="디데이스피치 네이버지도 위치"
-                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                }}
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 opacity-0" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0e2442]/35 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3 rounded-2xl bg-white/92 px-4 py-3 text-left shadow-lg backdrop-blur">
                 <div>
