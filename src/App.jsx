@@ -373,9 +373,15 @@ export default function App() {
           </div>
 
           <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0e2442] via-[#17375f] to-[#7ed4cf] p-6 shadow-2xl shadow-slate-200">
-            <div className="aspect-[4/3] rounded-[1.5rem] border border-white/15 bg-white/10 p-7 text-white">
-              <div className="flex h-full flex-col justify-between">
-                <span className="w-fit rounded-full bg-white/15 px-4 py-2 text-sm font-bold">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-white/15 text-white">
+              <img
+                src="/classroom-speech.png"
+                alt="아이들이 발표 수업을 준비하는 밝은 교실"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0e2442]/80 via-[#0e2442]/22 to-transparent" />
+              <div className="relative flex h-full flex-col justify-between p-7">
+                <span className="w-fit rounded-full bg-white/20 px-4 py-2 text-sm font-bold shadow-sm backdrop-blur">
                   교실 이미지
                 </span>
                 <div>
@@ -386,7 +392,7 @@ export default function App() {
                     {["발성", "자세", "피드백"].map((item) => (
                       <span
                         key={item}
-                        className="rounded-2xl bg-white/15 py-3 text-center text-sm font-bold"
+                        className="rounded-2xl bg-white/18 py-3 text-center text-sm font-bold shadow-sm backdrop-blur"
                       >
                         {item}
                       </span>
