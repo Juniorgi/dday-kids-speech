@@ -431,7 +431,9 @@ export default function App() {
                 <MapPin className="mt-1 shrink-0 text-sky-600" size={22} />
                 <div>
                   <p className="font-extrabold">주소</p>
-                  <p className="mt-1 text-slate-600">서울특별시 강남구 대치동 123</p>
+                  <p className="mt-1 text-slate-600">
+                    선릉로 704 12층 1221호 디데이스피치
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3">
