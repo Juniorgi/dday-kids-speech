@@ -548,7 +548,7 @@ export default function App() {
                 <img
                   src="/instructor-cho.png"
                   alt="조은준 강사"
-                  className="h-full w-full origin-bottom scale-[0.84] object-contain object-bottom"
+                  className="h-full w-full origin-bottom translate-y-6 scale-[0.84] object-contain object-bottom"
                 />
               </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
