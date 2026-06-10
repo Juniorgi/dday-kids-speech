@@ -131,20 +131,19 @@ export default function App() {
     "방송·행사·강의 총 10년 방송 경력",
   ];
 
-  const choInstructorHighlights = [
-    "초·중·고 스피치",
-    "아나운서 발성",
-    "발표 자신감",
-    "역사 기반 표현력",
+  const ohInstructorHighlights = [
+    "키즈 경제 문해력",
+    "투자·자금관리",
+    "생활 경제 언어",
+    "경제 발표 코칭",
   ];
 
-  const choCareers = [
-    "現 디데이스피치 아카데미 대표강사",
-    "前 한국경제TV 아나운서",
-    "前 딜사이트경제TV 아나운서",
-    "역사 교원 자격증 보유",
-    "초·중·고 대상 스피치 강의 경력 7년",
-    "방송·행사·강의 총 10년 방송 경력",
+  const ohCareers = [
+    "이데일리 주식투자 전문가",
+    "증권투자권유대행인",
+    "투자·자금관리 교육 멘토",
+    "키즈 경제 문해력 클래스 진행",
+    "생활 경제 개념 스토리텔링 강의",
   ];
 
   const huhInstructorHighlights = [
@@ -610,9 +609,9 @@ export default function App() {
             <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 sm:p-9">
               <div className="mb-7 h-80 overflow-hidden rounded-3xl bg-gradient-to-br from-white via-sky-50 to-amber-50 shadow-lg shadow-slate-100 sm:h-96 lg:h-[26rem]">
                 <img
-                  src="/instructor-cho.png"
-                  alt="조은준 강사"
-                  className="h-full w-full origin-bottom scale-[0.84] object-contain object-bottom"
+                  src="/instructor-oh.png"
+                  alt="오진승 강사"
+                  className="h-full w-full object-contain object-bottom"
                 />
               </div>
               <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -621,16 +620,16 @@ export default function App() {
                     INSTRUCTOR
                   </span>
                   <h3 className="mt-3 text-3xl font-extrabold text-[#0e2442]">
-                    조은준 강사
+                    오진승 강사
                   </h3>
                   <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
-                    방송 아나운서 경력과 초·중·고 스피치 강의 경험을 바탕으로
-                    아이들이 또렷한 발성, 안정적인 자세, 자신 있는 표현을
-                    익히도록 지도합니다.
+                    투자와 자금관리 개념을 생활 속 경제 언어로 쉽게 풀어내는
+                    머니쌤으로, 아이들이 경제를 말로 이해하고 표현하도록
+                    돕습니다.
                   </p>
                 </div>
-                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-amber-50 text-[#f59e0b]">
-                  <Award size={38} />
+                <div className="flex size-20 shrink-0 items-center justify-center rounded-3xl bg-emerald-50 text-emerald-700">
+                  <BookOpenCheck size={38} />
                 </div>
               </div>
 
@@ -639,7 +638,7 @@ export default function App() {
                   주요 강의 분야
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {choInstructorHighlights.map((item) => (
+                  {ohInstructorHighlights.map((item) => (
                     <span
                       key={item}
                       className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm"
@@ -655,7 +654,7 @@ export default function App() {
                   주요 경력
                 </p>
                 <div className="mt-5 grid gap-3">
-                  {choCareers.map((career) => (
+                  {ohCareers.map((career) => (
                     <div key={career} className="flex items-start gap-3">
                       <CheckCircle2
                         className="mt-0.5 shrink-0 text-teal-500"
