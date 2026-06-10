@@ -35,7 +35,7 @@ export default function App() {
     { title: "면접·자기소개", text: "첫인상을 만드는 자신 있는 답변" },
   ];
 
-  const programs = [
+  const programCategories = [
     {
       title: "AI 키즈 스피치",
       desc: "AI 시대에 필요한 말하기 자신감과 표현력을 키우는 키즈 스피치 프로그램",
@@ -53,6 +53,33 @@ export default function App() {
       desc: "키즈 발표회, 캠프, 특강, 기관 출강까지 목적에 맞춰 기획하는 맞춤형 행사 프로그램",
       tags: ["발표회", "캠프", "기관 특강"],
       icon: CalendarCheck,
+    },
+  ];
+
+  const programs = [
+    {
+      title: "키즈 발표 스피치",
+      desc: "발표를 어려워하는 아이들을 위한 자신감 향상 프로그램",
+      tags: ["발표자신감", "발음·발성", "시선·자세"],
+      icon: Mic2,
+    },
+    {
+      title: "키즈 면접 클래스",
+      desc: "사립초·국제학교·영재원 면접을 위한 실전 대비 프로그램",
+      tags: ["자기소개", "질문응답", "모의면접"],
+      icon: Award,
+    },
+    {
+      title: "표현력·토론 클래스",
+      desc: "생각을 정리하고 논리적으로 말하는 힘을 키우는 프로그램",
+      tags: ["생각정리", "논리표현", "토론"],
+      icon: MessageCircle,
+    },
+    {
+      title: "스토리텔링 클래스",
+      desc: "상상력과 창의력을 말로 표현하는 수업",
+      tags: ["스토리구성", "창의표현", "독서연계"],
+      icon: BookOpenCheck,
     },
   ];
 
@@ -322,7 +349,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {programs.map(({ title, desc, tags, icon: Icon }) => (
+            {programCategories.map(({ title, desc, tags, icon: Icon }) => (
               <article
                 key={title}
                 className="group flex min-h-[22rem] flex-col rounded-3xl border border-slate-100 bg-white p-8 shadow-xl shadow-slate-100 transition hover:-translate-y-1 hover:shadow-2xl"
@@ -332,6 +359,48 @@ export default function App() {
                 </div>
                 <h3 className="text-3xl font-extrabold">{title}</h3>
                 <p className="mt-4 flex-1 text-base leading-7 text-slate-600">{desc}</p>
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-[#f3f7fb] px-3 py-2 text-xs font-bold text-slate-600"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-20 mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <span className="text-sm font-extrabold text-sky-600">
+                SPEECH CLASS
+              </span>
+              <h3 className="mt-4 text-3xl font-extrabold sm:text-4xl">
+                프로그램 소개
+              </h3>
+            </div>
+            <p className="max-w-md text-base leading-7 text-slate-500">
+              발표, 면접, 토론, 스토리텔링까지 아이의 목표에 맞춘 클래스로
+              구성했습니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {programs.map(({ title, desc, tags, icon: Icon }) => (
+              <article
+                key={title}
+                className="group flex min-h-[21.5rem] flex-col rounded-3xl border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100 transition hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <div className="mb-7 flex size-14 items-center justify-center rounded-2xl bg-sky-50 text-sky-700 transition group-hover:bg-[#0e2442] group-hover:text-white">
+                  <Icon size={26} />
+                </div>
+                <h3 className="text-2xl font-extrabold">{title}</h3>
+                <p className="mt-4 flex-1 text-base leading-7 text-slate-600">
+                  {desc}
+                </p>
                 <div className="mt-7 flex flex-wrap gap-2">
                   {tags.map((tag) => (
                     <span
