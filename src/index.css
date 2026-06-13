@@ -19,6 +19,16 @@ body {
     linear-gradient(180deg, #ffffff 0%, #f8fbff 48%, #ffffff 100%);
 }
 
+.text-xs {
+  font-size: 0.875rem;
+  line-height: 1.35rem;
+}
+
+.text-sm {
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
