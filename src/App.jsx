@@ -224,7 +224,7 @@ export default function App() {
               생각을 자신 있게 말하는 아이
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
-              대치동 키즈 스피치 전문 클래스, 아이의 말하기 실력과 자신감을
+              키즈 스피치 전문 클래스, 아이의 말하기 실력과 자신감을
               키워줍니다.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
