@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Award,
   BookOpenCheck,
@@ -21,6 +22,38 @@ export default function App() {
   const kakaoChatUrl = "https://open.kakao.com/o/smjiKjui";
   const phoneUrl = "tel:01022297378";
   const navItems = ["홈", "회사소개", "프로그램", "수업소개", "강사진", "수강후기", "상담예약"];
+  const [currentPage, setCurrentPage] = useState(() =>
+    window.location.hash === "#회사소개" ? "company" : "home",
+  );
+
+  useEffect(() => {
+    const syncPage = () => {
+      setCurrentPage(window.location.hash === "#회사소개" ? "company" : "home");
+    };
+
+    window.addEventListener("hashchange", syncPage);
+    return () => window.removeEventListener("hashchange", syncPage);
+  }, []);
+
+  const handleNavigation = (event, item) => {
+    event.preventDefault();
+
+    if (item === "회사소개") {
+      setCurrentPage("company");
+      window.history.pushState(null, "", "#회사소개");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const targetId = item === "홈" ? "home" : item;
+
+    setCurrentPage("home");
+    window.history.pushState(null, "", `#${targetId}`);
+
+    window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
 
   const strengths = [
     { title: "소수정예 수업", icon: UsersRound, tone: "bg-sky-50 text-sky-600" },
@@ -168,11 +201,90 @@ export default function App() {
     "수업이 재미있어서 스스로 발표 연습을 하게 되었어요.",
   ];
 
+  const companyIntroSection = (
+    <section id="회사소개" className="bg-[#f8fbff] px-5 py-24 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <span className="text-sm font-extrabold text-sky-600">
+            ABOUT DDAY
+          </span>
+          <h1 className="mt-4 text-4xl font-extrabold leading-tight text-[#0e2442] sm:text-5xl">
+            읽고, 이해하고, 자신의 언어로 말하는 힘
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            쇼츠와 유튜브처럼 짧고 빠른 콘텐츠가 익숙해지면서 학생들은 글을
+            읽는 능력은 갖추고 있지만, 읽은 내용을 정확히 이해하고 자신의
+            언어로 정리해 표현하는 힘은 상대적으로 부족해지고 있습니다.
+          </p>
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            단순히 책을 많이 읽는 교육만으로는 사고력 확장, 논리적 표현,
+            실제 학습 활용 능력을 함께 키우는 데 한계가 있습니다.
+            디데이 키즈스피치는 문해력을 글 읽기에서 끝내지 않고, 이해한
+            내용을 구조화해 말과 글로 표현하는 통합형 교육으로 확장합니다.
+          </p>
+        </div>
+
+        <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-2xl shadow-slate-100 sm:p-9">
+          <div className="rounded-3xl bg-gradient-to-br from-[#0e2442] via-[#17375f] to-[#7ed4cf] p-7 text-white">
+            <p className="text-sm font-extrabold text-sky-100">
+              2024 전국민 금융이해력 조사
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              {[
+                ["65.7점", "성인 금융이해력"],
+                ["73.6점", "금융지식"],
+                ["64.7점", "금융행위"],
+              ].map(([value, label]) => (
+                <div
+                  key={label}
+                  className="rounded-2xl bg-white/14 p-5 shadow-sm backdrop-blur"
+                >
+                  <p className="text-3xl font-extrabold">{value}</p>
+                  <p className="mt-2 text-sm font-bold text-sky-50">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm font-semibold leading-7 text-sky-50">
+              한국은행·금융감독원 조사에 따르면 2024년 우리나라 성인의
+              금융이해력은 2022년보다 소폭 하락했고, 금융지식과 금융행위
+              영역도 함께 낮아졌습니다.
+            </p>
+          </div>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {[
+              ["문해력", "읽은 내용을 이해하고 핵심을 구조화합니다."],
+              ["표현력", "자신의 언어로 설명하고 발표하는 힘을 기릅니다."],
+              ["경제 이해", "돈과 소비, 투자 개념을 생활 언어로 배웁니다."],
+              ["실전 활용", "학교 발표와 토론, 면접 상황으로 연결합니다."],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="rounded-2xl bg-[#fbfdff] p-5 shadow-lg shadow-slate-100"
+              >
+                <p className="font-extrabold text-[#0e2442]">{title}</p>
+                <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <main className="min-h-screen overflow-hidden bg-white text-[#0e2442]">
       <nav className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-          <a href="#home" className="flex items-center gap-3">
+          <a
+            href="#홈"
+            className="flex items-center gap-3"
+            onClick={(event) => handleNavigation(event, "홈")}
+          >
             <span className="flex size-11 items-center justify-center rounded-2xl bg-[#0e2442] text-white shadow-lg shadow-slate-200">
               <MessageCircle size={22} />
             </span>
@@ -186,6 +298,7 @@ export default function App() {
               <a
                 key={item}
                 href={`#${item}`}
+                onClick={(event) => handleNavigation(event, item)}
                 className="text-sm font-semibold text-slate-600 transition hover:text-[#0e2442]"
               >
                 {item}
@@ -212,6 +325,19 @@ export default function App() {
         </div>
       </nav>
 
+      {currentPage === "company" ? (
+        <>
+          {companyIntroSection}
+
+          <footer className="border-t border-slate-100 px-5 py-8 lg:px-8">
+            <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-500 sm:flex-row">
+              <p className="font-bold text-[#0e2442]">디데이 키즈스피치</p>
+              <p>Premium kids speech class.</p>
+            </div>
+          </footer>
+        </>
+      ) : (
+        <>
       <section id="home" className="relative px-5 pb-20 pt-16 sm:pt-20 lg:px-8 lg:pb-28">
         <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-sky-50 to-transparent" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
@@ -278,79 +404,6 @@ export default function App() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      <section id="회사소개" className="bg-[#f8fbff] px-5 py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div>
-            <span className="text-sm font-extrabold text-sky-600">
-              ABOUT DDAY
-            </span>
-            <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#0e2442] sm:text-5xl">
-              읽고, 이해하고, 자신의 언어로 말하는 힘
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              쇼츠와 유튜브처럼 짧고 빠른 콘텐츠가 익숙해지면서 학생들은 글을
-              읽는 능력은 갖추고 있지만, 읽은 내용을 정확히 이해하고 자신의
-              언어로 정리해 표현하는 힘은 상대적으로 부족해지고 있습니다.
-            </p>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              단순히 책을 많이 읽는 교육만으로는 사고력 확장, 논리적 표현,
-              실제 학습 활용 능력을 함께 키우는 데 한계가 있습니다.
-              디데이 키즈스피치는 문해력을 글 읽기에서 끝내지 않고, 이해한
-              내용을 구조화해 말과 글로 표현하는 통합형 교육으로 확장합니다.
-            </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-2xl shadow-slate-100 sm:p-9">
-            <div className="rounded-3xl bg-gradient-to-br from-[#0e2442] via-[#17375f] to-[#7ed4cf] p-7 text-white">
-              <p className="text-sm font-extrabold text-sky-100">
-                2024 전국민 금융이해력 조사
-              </p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                {[
-                  ["65.7점", "성인 금융이해력"],
-                  ["73.6점", "금융지식"],
-                  ["64.7점", "금융행위"],
-                ].map(([value, label]) => (
-                  <div
-                    key={label}
-                    className="rounded-2xl bg-white/14 p-5 shadow-sm backdrop-blur"
-                  >
-                    <p className="text-3xl font-extrabold">{value}</p>
-                    <p className="mt-2 text-sm font-bold text-sky-50">
-                      {label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm font-semibold leading-7 text-sky-50">
-                한국은행·금융감독원 조사에 따르면 2024년 우리나라 성인의
-                금융이해력은 2022년보다 소폭 하락했고, 금융지식과 금융행위
-                영역도 함께 낮아졌습니다.
-              </p>
-            </div>
-
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {[
-                ["문해력", "읽은 내용을 이해하고 핵심을 구조화합니다."],
-                ["표현력", "자신의 언어로 설명하고 발표하는 힘을 기릅니다."],
-                ["경제 이해", "돈과 소비, 투자 개념을 생활 언어로 배웁니다."],
-                ["실전 활용", "학교 발표와 토론, 면접 상황으로 연결합니다."],
-              ].map(([title, text]) => (
-                <div
-                  key={title}
-                  className="rounded-2xl bg-[#fbfdff] p-5 shadow-lg shadow-slate-100"
-                >
-                  <p className="font-extrabold text-[#0e2442]">{title}</p>
-                  <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -981,9 +1034,11 @@ export default function App() {
       <footer className="border-t border-slate-100 px-5 py-8 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-500 sm:flex-row">
           <p className="font-bold text-[#0e2442]">디데이 키즈스피치</p>
-          <p>Premium kids speech class in Daechi-dong.</p>
+          <p>Premium kids speech class.</p>
         </div>
       </footer>
+        </>
+      )}
     </main>
   );
 }
