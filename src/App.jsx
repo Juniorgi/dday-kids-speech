@@ -25,6 +25,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState(() =>
     window.location.hash === "#회사소개" ? "company" : "home",
   );
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const syncPage = () => {
@@ -37,6 +38,7 @@ export default function App() {
 
   const handleNavigation = (event, item) => {
     event.preventDefault();
+    setIsMobileMenuOpen(false);
 
     if (item === "회사소개") {
       setCurrentPage("company");
@@ -326,12 +328,41 @@ export default function App() {
             </a>
             <button
               className="flex size-11 items-center justify-center rounded-full border border-slate-200 text-[#0e2442] lg:hidden"
-              aria-label="메뉴 열기"
+              type="button"
+              aria-label={isMobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+              aria-expanded={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
             >
               <Menu size={22} />
             </button>
           </div>
         </div>
+
+        {isMobileMenuOpen && (
+          <div className="border-t border-slate-100 bg-white px-5 py-4 shadow-xl shadow-slate-100 lg:hidden">
+            <div className="mx-auto grid max-w-7xl gap-2">
+              {navItems.map((item) => (
+                <a
+                  key={item}
+                  href={`#${item}`}
+                  onClick={(event) => handleNavigation(event, item)}
+                  className="rounded-2xl px-4 py-4 text-lg font-extrabold text-[#0e2442] transition hover:bg-sky-50"
+                >
+                  {item}
+                </a>
+              ))}
+              <a
+                href={kakaoChatUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 inline-flex items-center justify-center rounded-2xl bg-[#0e2442] px-5 py-4 text-lg font-extrabold text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                체험수업 신청
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {currentPage === "company" ? (
