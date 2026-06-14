@@ -196,9 +196,18 @@ export default function App() {
   ];
 
   const reviews = [
-    "발표를 너무 무서워했는데, 이제는 친구들 앞에서도 자신 있게 말해요.",
-    "자기소개가 자연스러워지고 목소리도 커져서 면접에서 좋은 결과가 있었어요.",
-    "수업이 재미있어서 스스로 발표 연습을 하게 되었어요.",
+    {
+      text: "발표를 너무 무서워했는데, 이제는 친구들 앞에서도 자신 있게 말해요.",
+      author: "대치동 OO양 어머니",
+    },
+    {
+      text: "자기소개가 자연스러워지고 목소리도 커져서 면접에서 좋은 결과가 있었어요.",
+      author: "반포동 OO군 어머니",
+    },
+    {
+      text: "수업이 재미있어서 스스로 발표 연습을 하게 되었어요.",
+      author: "압구정동 OO양",
+    },
   ];
 
   const companyIntroSection = (
@@ -932,16 +941,18 @@ export default function App() {
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {reviews.map((review, index) => (
+            {reviews.map((review) => (
               <article
-                key={review}
+                key={review.author}
                 className="rounded-3xl border border-slate-100 bg-white p-7 shadow-xl shadow-slate-100"
               >
                 <Quote className="mb-6 text-sky-500" size={32} />
-                <p className="text-lg font-bold leading-8 text-[#0e2442]">“{review}”</p>
+                <p className="text-lg font-bold leading-8 text-[#0e2442]">
+                  “{review.text}”
+                </p>
                 <div className="mt-7 flex items-center gap-2 text-sm font-bold text-slate-400">
                   <Star size={16} className="fill-amber-300 text-amber-300" />
-                  D-Day Kids Speech {index + 1}
+                  {review.author}
                 </div>
               </article>
             ))}
