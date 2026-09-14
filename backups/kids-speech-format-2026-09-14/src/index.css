@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  color: #0e2442;
+  background: #f8fbff;
+  font-family:
+    Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(181, 234, 231, 0.32), transparent 30rem),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 48%, #ffffff 100%);
+}
+
+.text-xs {
+  font-size: 1rem !important;
+  line-height: 1.55rem !important;
+}
+
+.text-sm {
+  font-size: 1.0625rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-base {
+  font-size: 1.125rem !important;
+  line-height: 1.9rem !important;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

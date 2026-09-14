@@ -58,62 +58,62 @@ export default function App() {
   };
 
   const strengths = [
-    { title: "1:1 맞춤 코칭", icon: UsersRound, tone: "bg-sky-50 text-sky-600" },
-    { title: "실전 발표 훈련", icon: Target, tone: "bg-teal-50 text-teal-600" },
+    { title: "소수정예 수업", icon: UsersRound, tone: "bg-sky-50 text-sky-600" },
+    { title: "실전 중심 교육", icon: Target, tone: "bg-teal-50 text-teal-600" },
     { title: "체계적인 커리큘럼", icon: BookOpenCheck, tone: "bg-blue-50 text-blue-700" },
-    { title: "전달력 향상", icon: Sparkles, tone: "bg-amber-50 text-amber-600" },
+    { title: "자신감 향상", icon: Sparkles, tone: "bg-amber-50 text-amber-600" },
   ];
 
   const circles = [
-    { title: "프레젠테이션", text: "핵심을 설득력 있게 전달하는 발표" },
-    { title: "회의·토론", text: "생각을 구조화해 명확하게 표현" },
+    { title: "발표 수업", text: "또렷한 목소리와 안정적인 자세" },
+    { title: "수행평가·토론", text: "생각을 정리해 논리적으로 표현" },
     { title: "면접·자기소개", text: "첫인상을 만드는 자신 있는 답변" },
   ];
 
   const programCategories = [
     {
-      title: "성인 스피치",
-      desc: "말의 구조, 목소리, 태도를 함께 다듬어 전달력을 높이는 성인 스피치 프로그램",
-      tags: ["발표 자신감", "보이스", "표현력 코칭"],
+      title: "AI 키즈 스피치",
+      desc: "AI 시대에 필요한 말하기 자신감과 표현력을 키우는 키즈 스피치 프로그램",
+      tags: ["발표 자신감", "AI 활용", "표현력 코칭"],
       icon: Mic2,
     },
     {
-      title: "면접·자기소개",
-      desc: "취업, 이직, 승진 면접에서 나를 명확하게 설명하는 실전 대비 수업",
-      tags: ["답변 구조", "자기소개", "모의면접"],
-      icon: Award,
+      title: "키즈 경제 문해력",
+      desc: "돈, 소비, 투자, 창업의 기본 개념을 아이 눈높이에 맞춰 배우는 경제 문해력 수업",
+      tags: ["경제 습관", "문해력", "발표 활동"],
+      icon: BookOpenCheck,
     },
     {
-      title: "기업·기관 특강",
-      desc: "조직의 목적에 맞춰 발표, 커뮤니케이션, 사회 진행 역량을 코칭하는 맞춤형 특강",
-      tags: ["기업교육", "프레젠테이션", "진행 코칭"],
+      title: "행사",
+      desc: "키즈 발표회, 캠프, 특강, 기관 출강까지 목적에 맞춰 기획하는 맞춤형 행사 프로그램",
+      tags: ["발표회", "캠프", "기관 특강"],
       icon: CalendarCheck,
     },
   ];
 
   const programs = [
     {
-      title: "발표 스피치",
-      desc: "회의, 보고, 제안 발표를 위한 자신감 향상 프로그램",
+      title: "키즈 발표 스피치",
+      desc: "발표를 어려워하는 아이들을 위한 자신감 향상 프로그램",
       tags: ["발표자신감", "발음·발성", "시선·자세"],
       icon: Mic2,
     },
     {
-      title: "면접 스피치",
-      desc: "취업·이직·승진 면접을 위한 실전 대비 프로그램",
+      title: "키즈 면접 클래스",
+      desc: "사립초·국제학교·영재원 면접을 위한 실전 대비 프로그램",
       tags: ["자기소개", "질문응답", "모의면접"],
       icon: Award,
     },
     {
-      title: "비즈니스 커뮤니케이션",
+      title: "표현력·토론 클래스",
       desc: "생각을 정리하고 논리적으로 말하는 힘을 키우는 프로그램",
-      tags: ["생각정리", "논리표현", "회의"],
+      tags: ["생각정리", "논리표현", "토론"],
       icon: MessageCircle,
     },
     {
-      title: "보이스·발성 클래스",
-      desc: "목소리의 힘과 말의 인상을 바꾸는 발성·발음 수업",
-      tags: ["발성", "발음", "호흡"],
+      title: "스토리텔링 클래스",
+      desc: "상상력과 창의력을 말로 표현하는 수업",
+      tags: ["스토리구성", "창의표현", "독서연계"],
       icon: BookOpenCheck,
     },
   ];
@@ -139,7 +139,7 @@ export default function App() {
 
   const leeInstructorHighlights = [
     "공감 대화법",
-    "성인 발표 자신감 코칭",
+    "어린이 발표 자신감 코칭",
     "면접 스피치 컨설팅",
     "진로·커뮤니케이션 강의",
   ];
@@ -167,7 +167,7 @@ export default function App() {
   ];
 
   const ohInstructorHighlights = [
-    "경제 문해력",
+    "키즈 경제 문해력",
     "투자·자금관리",
     "생활 경제 언어",
     "경제 발표 코칭",
@@ -177,7 +177,7 @@ export default function App() {
     "이데일리 주식투자 전문가",
     "증권투자권유대행인",
     "투자·자금관리 교육 멘토",
-    "경제 문해력 클래스 진행",
+    "키즈 경제 문해력 클래스 진행",
     "생활 경제 개념 스토리텔링 강의",
   ];
 
@@ -199,16 +199,16 @@ export default function App() {
 
   const reviews = [
     {
-      text: "회의 발표 때마다 긴장했는데, 이제는 핵심을 정리해서 차분하게 말할 수 있게 됐어요.",
-      author: "강남구 직장인 수강생",
+      text: "발표를 너무 무서워했는데, 이제는 친구들 앞에서도 자신 있게 말해요.",
+      author: "대치동 OO양 어머니",
     },
     {
-      text: "자기소개와 답변 흐름이 자연스러워져서 면접장에서 훨씬 안정적으로 말할 수 있었습니다.",
-      author: "이직 면접 준비 수강생",
+      text: "자기소개가 자연스러워지고 목소리도 커져서 면접에서 좋은 결과가 있었어요.",
+      author: "반포동 OO군 어머니",
     },
     {
-      text: "목소리가 작고 말끝이 흐렸는데, 발성 훈련 후 말의 인상이 또렷해졌다는 피드백을 받았어요.",
-      author: "압구정동 성인 수강생",
+      text: "수업이 재미있어서 스스로 발표 연습을 하게 되었어요.",
+      author: "압구정동 OO양",
     },
   ];
 
@@ -220,31 +220,31 @@ export default function App() {
             ABOUT DDAY
           </span>
           <h1 className="mt-4 text-4xl font-extrabold leading-tight text-[#0e2442] sm:text-5xl">
-            말의 구조를 세우고, 나답게 전달하는 힘
+            읽고, 이해하고, 자신의 언어로 말하는 힘
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            일과 관계의 많은 순간은 결국 말로 결정됩니다. 회의에서 의견을
-            전하고, 면접에서 나를 설명하고, 발표에서 상대를 설득하려면
-            단순히 말을 많이 하는 것이 아니라 핵심을 구조화해 정확하게
-            전달하는 훈련이 필요합니다.
+            쇼츠와 유튜브처럼 짧고 빠른 콘텐츠가 익숙해지면서 학생들은 글을
+            읽는 능력은 갖추고 있지만, 읽은 내용을 정확히 이해하고 자신의
+            언어로 정리해 표현하는 힘은 상대적으로 부족해지고 있습니다.
           </p>
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            디데이스피치는 방송 진행 경험과 스피치 교육 노하우를 바탕으로
-            성인 수강생의 말 습관, 목소리, 답변 구조를 진단하고 실제 상황에서
-            바로 써먹을 수 있는 표현력으로 연결합니다.
+            단순히 책을 많이 읽는 교육만으로는 사고력 확장, 논리적 표현,
+            실제 학습 활용 능력을 함께 키우는 데 한계가 있습니다.
+            디데이 키즈스피치는 문해력을 글 읽기에서 끝내지 않고, 이해한
+            내용을 구조화해 말과 글로 표현하는 통합형 교육으로 확장합니다.
           </p>
         </div>
 
         <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-2xl shadow-slate-100 sm:p-9">
           <div className="rounded-3xl bg-gradient-to-br from-[#0e2442] via-[#17375f] to-[#7ed4cf] p-7 text-white">
             <p className="text-sm font-extrabold text-sky-100">
-              DDAY Speech Coaching
+              2024 전국민 금융이해력 조사
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
-                ["1:1", "맞춤 진단"],
-                ["실전", "발표·면접 훈련"],
-                ["코칭", "목소리·태도 피드백"],
+                ["65.7점", "성인 금융이해력"],
+                ["73.6점", "금융지식"],
+                ["64.7점", "금융행위"],
               ].map(([value, label]) => (
                 <div
                   key={label}
@@ -258,18 +258,18 @@ export default function App() {
               ))}
             </div>
             <p className="mt-6 text-sm font-semibold leading-7 text-sky-50">
-              말의 내용, 목소리, 표정, 자세를 함께 다루어 직장 발표와 면접,
-              사회 진행, 대인 커뮤니케이션 상황에서 신뢰감 있게 말하도록
-              돕습니다.
+              한국은행·금융감독원 조사에 따르면 2024년 우리나라 성인의
+              금융이해력은 2022년보다 소폭 하락했고, 금융지식과 금융행위
+              영역도 함께 낮아졌습니다.
             </p>
           </div>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {[
-              ["구조화", "흩어진 생각을 핵심 메시지로 정리합니다."],
-              ["전달력", "목소리와 말의 속도, 시선 처리를 다듬습니다."],
-              ["실전 답변", "면접과 질의응답 상황에 맞는 답변을 훈련합니다."],
-              ["자신감", "긴장 상황에서도 안정적으로 말하는 힘을 기릅니다."],
+              ["문해력", "읽은 내용을 이해하고 핵심을 구조화합니다."],
+              ["표현력", "자신의 언어로 설명하고 발표하는 힘을 기릅니다."],
+              ["경제 이해", "돈과 소비, 투자 개념을 생활 언어로 배웁니다."],
+              ["실전 활용", "학교 발표와 토론, 면접 상황으로 연결합니다."],
             ].map(([title, text]) => (
               <div
                 key={title}
@@ -300,7 +300,7 @@ export default function App() {
               <MessageCircle size={22} />
             </span>
             <span className="text-lg font-extrabold tracking-normal sm:text-xl">
-              디데이스피치
+              디데이 키즈스피치
             </span>
           </a>
 
@@ -371,7 +371,7 @@ export default function App() {
 
           <footer className="border-t border-slate-100 px-5 py-8 lg:px-8">
             <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-500 sm:flex-row">
-              <p className="font-bold text-[#0e2442]">디데이스피치</p>
+              <p className="font-bold text-[#0e2442]">디데이 키즈스피치</p>
               <p>Premium kids speech class.</p>
             </div>
           </footer>
@@ -384,14 +384,14 @@ export default function App() {
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-4 py-2 text-sm font-bold text-sky-700 shadow-sm">
               <Star size={16} className="fill-sky-100" />
-              발표 · 면접 · 보이스 · 커뮤니케이션의 시작
+              발표 · 면접 · 자기소개 · 표현력의 첫 시작
             </div>
             <h1 className="max-w-2xl text-5xl font-extrabold leading-tight tracking-normal text-[#0e2442] sm:text-6xl lg:text-7xl">
-              나를 신뢰감 있게 말하는 사람
+              생각을 자신 있게 말하는 아이
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
-              성인 스피치 전문 클래스, 말의 구조와 목소리, 전달력을
-              함께 키워드립니다.
+              키즈 스피치 전문 클래스, 아이의 말하기 실력과 자신감을
+              키워줍니다.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
@@ -419,13 +419,13 @@ export default function App() {
             <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#dff4ff] via-[#f8fbff] to-[#dff7ef] p-6 shadow-2xl shadow-slate-200/80">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-white/80 bg-sky-50">
                 <img
-                  src="/adult-speech-hero.png"
-                  alt="성인 수강생이 발표 훈련을 하는 모습"
+                  src="/hero-student-speech.png"
+                  alt="마이크를 들고 발표하는 초등학생"
                   className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0e2442]/35 via-transparent to-white/5" />
                 <div className="absolute left-5 top-5 rounded-full bg-white/92 px-4 py-2 text-sm font-bold text-[#0e2442] shadow-sm backdrop-blur">
-                  발표 전달력을 키우는 스피치 클래스
+                  발표 자신감을 키우는 스피치 클래스
                 </div>
                 <div className="absolute right-5 top-5 flex size-12 items-center justify-center rounded-full bg-[#0e2442] text-white shadow-lg">
                   <Mic2 size={22} />
@@ -459,7 +459,7 @@ export default function App() {
               </div>
               <h2 className="text-xl font-extrabold">{title}</h2>
               <p className="mt-3 text-sm leading-6 text-slate-500">
-                현재 말하기 습관을 세심하게 진단하고 목표에 맞춰 코칭합니다.
+                아이의 현재 표현 수준을 세심하게 살피고 성장 속도에 맞춰 지도합니다.
               </p>
             </article>
           ))}
@@ -476,10 +476,10 @@ export default function App() {
               왜 말하기 능력이 중요할까요?
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              말하기는 발표 한 번을 잘하는 기술을 넘어, 일을 설득하고 관계를
-              만드는 기본 역량입니다. 안정적인 발성, 시선, 태도, 논리 표현을
-              익히면 회의와 면접, 발표 상황에서 더 단단한 신뢰감을 만들 수
-              있습니다.
+              말하기는 발표 한 번을 잘하는 기술을 넘어, 아이가 생각을 정리하고
+              관계 속에서 자신을 표현하는 기본 역량입니다. 어릴 때부터 안정적인
+              발성, 시선, 태도, 논리 표현을 익히면 학교생활과 면접 상황에서 더
+              단단한 자신감을 갖게 됩니다.
             </p>
           </div>
 
@@ -508,7 +508,7 @@ export default function App() {
               <h2 className="mt-4 text-4xl font-extrabold sm:text-5xl">프로그램</h2>
             </div>
             <p className="max-w-md text-base leading-7 text-slate-500">
-              발표, 면접, 보이스, 기업 특강까지 성인의 목표에 맞춰
+              스피치, 경제 문해력, 행사 프로그램까지 아이의 성장 목표에 맞춰
               구성했습니다.
             </p>
           </div>
@@ -548,7 +548,7 @@ export default function App() {
               </h3>
             </div>
             <p className="max-w-md text-base leading-7 text-slate-500">
-              발표, 면접, 커뮤니케이션, 보이스까지 목표에 맞춘 클래스로
+              발표, 면접, 토론, 스토리텔링까지 아이의 목표에 맞춘 클래스로
               구성했습니다.
             </p>
           </div>
@@ -603,8 +603,8 @@ export default function App() {
           <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0e2442] via-[#17375f] to-[#7ed4cf] p-6 shadow-2xl shadow-slate-200">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-white/15 text-white">
               <img
-                src="/adult-classroom-speech.png"
-                alt="발표 수업을 준비하는 밝은 스피치 강의실"
+                src="/classroom-speech.png"
+                alt="아이들이 발표 수업을 준비하는 밝은 교실"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0e2442]/80 via-[#0e2442]/22 to-transparent" />
@@ -614,7 +614,7 @@ export default function App() {
                 </span>
                 <div>
                   <p className="max-w-sm text-3xl font-extrabold leading-tight">
-                    편안하게 말하고, 정확하게 전달하는 수업 공간
+                    편안하게 말하고, 정확하게 성장하는 수업 공간
                   </p>
                   <div className="mt-6 grid grid-cols-3 gap-3">
                     {["발성", "자세", "피드백"].map((item) => (
@@ -668,8 +668,8 @@ export default function App() {
                       실전에서 통하는 스피치
                     </p>
                     <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">
-                      방송·행사·강의 경력을 바탕으로 말의 구조와 목소리를
-                      또렷하고 자연스럽게 다듬습니다.
+                      방송·행사·강의 경력을 바탕으로 아이가 자기 생각을
+                      또렷하고 자연스럽게 표현하도록 지도합니다.
                     </p>
                   </div>
                 </div>
@@ -686,7 +686,7 @@ export default function App() {
               <p className="mt-5 text-lg font-bold leading-8 text-slate-600">
                 방송·행사·강의 총 10년 경력의 실전형 스피치 전문가가
                 말하기의 기본기부터 발표 태도, 면접 답변, 자기소개까지
-                수강생의 목표와 상황에 맞춰 코칭합니다.
+                아이의 눈높이에 맞춰 코칭합니다.
               </p>
 
               <div className="mt-10 inline-flex rounded-xl bg-[#f59e0b] px-4 py-2 text-sm font-black uppercase text-white shadow-lg shadow-amber-100">
@@ -727,7 +727,7 @@ export default function App() {
                   </h3>
                   <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
                     “아나운서처럼 말하라, 현장에선 통한다”는 기준으로
-                    방송 현장의 전달력과 실전 감각을 성인 발표와 면접
+                    방송 현장의 전달력과 실전 감각을 아이들의 발표와 면접
                     수업에 연결합니다.
                   </p>
                 </div>
@@ -790,7 +790,7 @@ export default function App() {
                   </h3>
                   <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
                     투자와 자금관리 개념을 생활 속 경제 언어로 쉽게 풀어내는
-                    머니쌤으로, 경제 개념을 말로 이해하고 표현하도록
+                    머니쌤으로, 아이들이 경제를 말로 이해하고 표현하도록
                     돕습니다.
                   </p>
                 </div>
@@ -852,7 +852,7 @@ export default function App() {
                     이채범 강사
                   </h3>
                   <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
-                    공감 대화법을 바탕으로 말하기 상황을 편안하게
+                    공감 대화법을 바탕으로 아이들이 말하기 상황을 편안하게
                     받아들이고, 자기 생각을 자신 있게 표현할 수 있도록 돕는
                     커뮤니케이션 강사입니다.
                   </p>
@@ -1002,7 +1002,7 @@ export default function App() {
               무료 상담 & 체험수업 신청
             </h2>
             <p className="mt-5 text-lg leading-8 text-sky-100">
-              말하기 실력, 지금 바로 시작하세요.
+              아이의 말하기 실력, 지금 바로 시작하세요.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {["체험수업 신청", "상담 예약하기", "전화 상담"].map((label, index) => (
@@ -1075,7 +1075,7 @@ export default function App() {
 
       <footer className="border-t border-slate-100 px-5 py-8 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-500 sm:flex-row">
-          <p className="font-bold text-[#0e2442]">디데이스피치</p>
+          <p className="font-bold text-[#0e2442]">디데이 키즈스피치</p>
           <p>Premium kids speech class.</p>
         </div>
       </footer>
