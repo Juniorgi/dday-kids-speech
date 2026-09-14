@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dday-kids-speech-p6bf.vercel.app/sitemap.xml
