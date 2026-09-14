@@ -19,6 +19,69 @@ body {
     linear-gradient(180deg, #ffffff 0%, #f8fbff 48%, #ffffff 100%);
 }
 
+.dday-marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.dday-marquee-track {
+  animation: dday-marquee 28s linear infinite;
+}
+
+.dday-float-y {
+  animation: dday-float-y 4.8s ease-in-out infinite;
+}
+
+.dday-float-soft {
+  animation: dday-float-soft 7s ease-in-out infinite;
+}
+
+.dday-slide-soft {
+  animation: dday-slide-soft 6.5s ease-in-out infinite;
+}
+
+@keyframes dday-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes dday-float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes dday-float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes dday-slide-soft {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
+}
+
 .text-xs {
   font-size: 1rem !important;
   line-height: 1.55rem !important;
@@ -37,4 +100,14 @@ body {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

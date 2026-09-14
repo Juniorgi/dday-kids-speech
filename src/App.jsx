@@ -8,6 +8,7 @@ import {
   ClipboardCheck,
   Clock,
   GraduationCap,
+  Handshake,
   MapPin,
   Menu,
   MessageCircle,
@@ -74,6 +75,19 @@ export default function App() {
     ["입시", "전형별 면접 전략"],
     ["성인", "발표·보이스 실습"],
     ["1:1", "개인별 답변 코칭"],
+  ];
+
+  const partnerLabels = [
+    "대학교 면접",
+    "공공기관 특강",
+    "기업 교육",
+    "청년센터",
+    "커리어센터",
+    "입시 컨설팅",
+    "아카데미 협업",
+    "학교 출강",
+    "기관 발표 교육",
+    "프레젠테이션 코칭",
   ];
 
   const strengths = [
@@ -323,6 +337,30 @@ export default function App() {
       text: "자기소개가 외운 티가 많이 났는데, 제 경험을 자연스럽게 말하는 방식으로 바뀌어서 면접 부담이 줄었어요.",
       author: "이직 면접 준비 수강생",
     },
+    {
+      text: "제시문을 읽고 바로 말로 정리하는 게 어려웠는데, 핵심을 잡는 순서를 배우고 답변이 훨씬 선명해졌습니다.",
+      author: "수시면접 준비 수강생",
+    },
+    {
+      text: "그룹수업에서 다른 분들 앞에서 말해보는 경험이 도움이 컸어요. 발표할 때 시선 처리도 훨씬 자연스러워졌습니다.",
+      author: "성인 그룹수업 수강생",
+    },
+    {
+      text: "면접 답변이 너무 길다는 피드백을 자주 받았는데, 지금은 결론부터 말하고 근거를 붙이는 방식이 익숙해졌어요.",
+      author: "공기업 면접 준비 수강생",
+    },
+    {
+      text: "목소리가 작아서 자신 없어 보인다는 말을 들었는데, 발성 수업 후 첫마디부터 힘 있게 시작할 수 있게 됐습니다.",
+      author: "보이스 코칭 수강생",
+    },
+    {
+      text: "중요한 보고 발표를 앞두고 1:1 수업을 들었는데, 자료 설명보다 메시지를 전달하는 법을 배운 게 가장 좋았습니다.",
+      author: "프리미엄 성인 스피치 수강생",
+    },
+    {
+      text: "학교별 질문을 같이 정리해주셔서 준비 시간이 줄었고, 마지막 모의면접에서 실제 긴장감까지 연습할 수 있었어요.",
+      author: "입시 프리미엄 코칭 수강생",
+    },
   ];
 
   const companyIntroSection = (
@@ -469,16 +507,39 @@ export default function App() {
         </>
       ) : (
         <>
+          <section className="border-b border-slate-100 bg-white py-3">
+            <div className="mx-auto flex max-w-7xl items-center gap-5 overflow-hidden px-5 lg:px-8">
+              <div className="flex shrink-0 items-center gap-2 rounded-full bg-[#0e2442] px-4 py-2 text-sm font-extrabold text-white">
+                <Handshake size={16} />
+                연계·출강 분야
+              </div>
+              <div className="dday-marquee flex min-w-0 flex-1 overflow-hidden">
+                <div className="dday-marquee-track flex shrink-0 items-center gap-3">
+                  {[...partnerLabels, ...partnerLabels].map((label, index) => (
+                    <span
+                      key={`${label}-${index}`}
+                      className="rounded-full border border-slate-100 bg-[#f8fbff] px-4 py-2 text-sm font-bold text-slate-600 shadow-sm"
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section id="home" className="relative px-5 pb-20 pt-16 sm:pt-20 lg:px-8 lg:pb-28">
             <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-sky-50 to-transparent" />
             <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1fr]">
               <div>
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-4 py-2 text-sm font-bold text-sky-700 shadow-sm">
+                <div className="dday-float-y mb-6 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-4 py-2 text-sm font-bold text-sky-700 shadow-sm">
                   <Star size={16} className="fill-sky-100" />
                   입시 면접부터 성인 스피치까지
                 </div>
                 <h1 className="max-w-2xl text-5xl font-extrabold leading-tight tracking-normal text-[#0e2442] sm:text-6xl lg:text-7xl">
-                  중요한 날, 말로 증명하는 사람
+                  중요한 날,
+                  <br />
+                  말로 증명하는 사람
                 </h1>
                 <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
                   디데이스피치는 입시 면접, 성인 그룹수업, 프리미엄 1:1
@@ -506,7 +567,7 @@ export default function App() {
 
               <div className="relative">
                 <div className="absolute -right-10 top-8 hidden h-28 w-28 rounded-full bg-teal-100/60 blur-2xl lg:block" />
-                <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#dff4ff] via-[#f8fbff] to-[#dff7ef] p-6 shadow-2xl shadow-slate-200/80">
+                <div className="dday-float-soft relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#dff4ff] via-[#f8fbff] to-[#dff7ef] p-6 shadow-2xl shadow-slate-200/80">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-white/80 bg-sky-50">
                     <img
                       src="/adult-speech-hero.png"
@@ -520,7 +581,7 @@ export default function App() {
                     <div className="absolute right-5 top-5 flex size-12 items-center justify-center rounded-full bg-[#0e2442] text-white shadow-lg">
                       <Mic2 size={22} />
                     </div>
-                    <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 gap-3">
+                    <div className="dday-slide-soft absolute bottom-5 left-5 right-5 grid grid-cols-3 gap-3">
                       {heroStats.map(([label, text]) => (
                         <span
                           key={label}
