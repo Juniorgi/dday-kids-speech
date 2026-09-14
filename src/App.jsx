@@ -77,43 +77,51 @@ export default function App() {
     ["1:1", "개인별 답변 코칭"],
   ];
 
-  const partnerLabels = [
-    ["서울", "서울특별시"],
-    ["성동", "성동구"],
-    ["강동", "강동구"],
-    ["은평", "은평구"],
-    ["강북", "강북구"],
-    ["강서", "강서구"],
-    ["동작", "동작구"],
-    ["강남", "강남구"],
-    ["경기", "경기도"],
-    ["광주", "경기광주시"],
-    ["퇴촌", "퇴촌면"],
-    ["울산", "울산광역시"],
-    ["대구", "대구광역시"],
-    ["충남", "충청남도교육청"],
-    ["천안", "천안시"],
-    ["의회", "강북구의회"],
-    ["청년", "노량진일자리센터"],
-    ["은청", "은평청년센터"],
-    ["금청", "금천청년센터"],
-    ["성청", "성동청년센터"],
-    ["파주", "파주청년센터"],
-    ["화성", "화성시"],
-    ["만석", "만석초등학교"],
-    ["유스", "시립서울유스호스텔"],
-    ["수원", "수원시"],
-    ["호서", "호서대학교"],
-    ["KMA", "한국능률협회"],
-    ["통계", "안동통계청"],
-    ["소방", "경주소방발전재단"],
-    ["경찰", "전라남도경찰청"],
-    ["NPS", "국민연금"],
-    ["KG", "KG그룹"],
-    ["HASH", "해시넷"],
-    ["HODAM", "호담"],
-    ["새마을", "서울시새마을회"],
-    ["용산", "용산구"],
+  const partnerLogos = [
+    {
+      name: "서울특별시",
+      src: "https://www.seoul.go.kr/res_newseoul/images/common/brand-seoulmysoul.png",
+    },
+    {
+      name: "성동구",
+      src: "https://www.sd.go.kr/site/main/images/common/svg_logo.svg",
+    },
+    {
+      name: "강동구",
+      src: "https://www.gangdong.go.kr/design/theme/gnagdong_logo.png",
+    },
+    {
+      name: "강남구",
+      src: "https://www.gangnam.go.kr/assets/images/contents/04/040401_img05.png",
+    },
+    {
+      name: "경기도",
+      src: "https://www.gg.go.kr/site/gg/common/img/img-header-logo_v20260629_1.png",
+    },
+    {
+      name: "대구광역시",
+      src: "https://www.daegu.go.kr/cmsh/daegu.go.kr/images/2023/common/logo_header.png",
+    },
+    {
+      name: "충청남도교육청",
+      src: "https://www.cne.go.kr/images/template/00002/common/logo.gif",
+    },
+    {
+      name: "수원시",
+      src: "https://www.suwon.go.kr/resources/web/www_2025/images/common/logo.png",
+    },
+    {
+      name: "용산구",
+      src: "https://www.yongsan.go.kr/static/portal/img/main2026/logo.png",
+    },
+    {
+      name: "호서대학교",
+      src: "https://www.hoseo.ac.kr/resources/images/korean/common/logo.png",
+    },
+    {
+      name: "KG그룹",
+      src: "https://kgdev.cafe24.com/images/sub/img-kg-ci-logo-type-txt.png",
+    },
   ];
 
   const strengths = [
@@ -635,32 +643,19 @@ export default function App() {
               </div>
               <div className="dday-marquee">
                 <div className="dday-marquee-track dday-logo-track flex w-max items-center gap-4">
-                  {[...partnerLabels, ...partnerLabels].map(([mark, label], index) => {
-                    const tones = [
-                      "from-sky-50 to-blue-100 text-blue-800",
-                      "from-emerald-50 to-teal-100 text-teal-800",
-                      "from-amber-50 to-orange-100 text-amber-800",
-                      "from-indigo-50 to-sky-100 text-indigo-800",
-                    ];
-                    return (
-                      <div
-                        key={`${mark}-${label}-${index}`}
-                        className="dday-logo-card flex h-20 min-w-56 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 shadow-lg shadow-slate-100"
-                      >
-                        <span
-                          className={`flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br text-sm font-black ${tones[index % tones.length]}`}
-                        >
-                          {mark.slice(0, 3)}
-                        </span>
-                        <span>
-                          <b className="block text-lg font-black tracking-normal text-[#0e2442]">
-                            {mark}
-                          </b>
-                          <span className="text-sm font-bold text-slate-500">{label}</span>
-                        </span>
-                      </div>
-                    );
-                  })}
+                  {[...partnerLogos, ...partnerLogos].map(({ name, src }, index) => (
+                    <div
+                      key={`${name}-${index}`}
+                      className="dday-logo-card flex h-24 min-w-60 items-center justify-center rounded-2xl border border-slate-100 bg-white px-6 shadow-lg shadow-slate-100"
+                    >
+                      <img
+                        src={src}
+                        alt={`${name} 로고`}
+                        className="max-h-12 max-w-40 object-contain"
+                      />
+                      <span className="sr-only">{name}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
