@@ -78,16 +78,42 @@ export default function App() {
   ];
 
   const partnerLabels = [
-    ["UNIV", "대학교 면접"],
-    ["PUBLIC", "공공기관 특강"],
-    ["COMPANY", "기업 교육"],
-    ["CAREER", "청년센터"],
-    ["CAMPUS", "커리어센터"],
-    ["ADMISSION", "입시 컨설팅"],
-    ["ACADEMY", "아카데미 협업"],
-    ["SCHOOL", "학교 출강"],
-    ["PRESENT", "기관 발표 교육"],
-    ["SPEECH", "프레젠테이션 코칭"],
+    ["서울", "서울특별시"],
+    ["성동", "성동구"],
+    ["강동", "강동구"],
+    ["은평", "은평구"],
+    ["강북", "강북구"],
+    ["강서", "강서구"],
+    ["동작", "동작구"],
+    ["강남", "강남구"],
+    ["경기", "경기도"],
+    ["광주", "경기광주시"],
+    ["퇴촌", "퇴촌면"],
+    ["울산", "울산광역시"],
+    ["대구", "대구광역시"],
+    ["충남", "충청남도교육청"],
+    ["천안", "천안시"],
+    ["의회", "강북구의회"],
+    ["청년", "노량진일자리센터"],
+    ["은청", "은평청년센터"],
+    ["금청", "금천청년센터"],
+    ["성청", "성동청년센터"],
+    ["파주", "파주청년센터"],
+    ["화성", "화성시"],
+    ["만석", "만석초등학교"],
+    ["유스", "시립서울유스호스텔"],
+    ["수원", "수원시"],
+    ["호서", "호서대학교"],
+    ["KMA", "한국능률협회"],
+    ["통계", "안동통계청"],
+    ["소방", "경주소방발전재단"],
+    ["경찰", "전라남도경찰청"],
+    ["NPS", "국민연금"],
+    ["KG", "KG그룹"],
+    ["HASH", "해시넷"],
+    ["HODAM", "호담"],
+    ["새마을", "서울시새마을회"],
+    ["용산", "용산구"],
   ];
 
   const strengths = [
@@ -609,22 +635,32 @@ export default function App() {
               </div>
               <div className="dday-marquee">
                 <div className="dday-marquee-track dday-logo-track flex w-max items-center gap-4">
-                  {[...partnerLabels, ...partnerLabels].map(([mark, label], index) => (
-                    <div
-                      key={`${mark}-${index}`}
-                      className="dday-logo-card flex h-20 min-w-48 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 shadow-lg shadow-slate-100"
-                    >
-                      <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-50 to-teal-50 text-sm font-black text-[#0e2442]">
-                        {mark.slice(0, 2)}
-                      </span>
-                      <span>
-                        <b className="block text-lg font-black tracking-normal text-[#0e2442]">
-                          {mark}
-                        </b>
-                        <span className="text-sm font-bold text-slate-500">{label}</span>
-                      </span>
-                    </div>
-                  ))}
+                  {[...partnerLabels, ...partnerLabels].map(([mark, label], index) => {
+                    const tones = [
+                      "from-sky-50 to-blue-100 text-blue-800",
+                      "from-emerald-50 to-teal-100 text-teal-800",
+                      "from-amber-50 to-orange-100 text-amber-800",
+                      "from-indigo-50 to-sky-100 text-indigo-800",
+                    ];
+                    return (
+                      <div
+                        key={`${mark}-${label}-${index}`}
+                        className="dday-logo-card flex h-20 min-w-56 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 shadow-lg shadow-slate-100"
+                      >
+                        <span
+                          className={`flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br text-sm font-black ${tones[index % tones.length]}`}
+                        >
+                          {mark.slice(0, 3)}
+                        </span>
+                        <span>
+                          <b className="block text-lg font-black tracking-normal text-[#0e2442]">
+                            {mark}
+                          </b>
+                          <span className="text-sm font-bold text-slate-500">{label}</span>
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
