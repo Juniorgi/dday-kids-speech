@@ -27,6 +27,24 @@ body {
   animation: dday-marquee 28s linear infinite;
 }
 
+.dday-logo-track {
+  padding-inline: 1.5rem;
+}
+
+.dday-logo-card {
+  filter: saturate(0.88);
+  transition:
+    transform 180ms ease,
+    filter 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.dday-logo-card:hover {
+  filter: saturate(1);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09);
+}
+
 .dday-float-y {
   animation: dday-float-y 4.8s ease-in-out infinite;
 }

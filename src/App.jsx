@@ -78,16 +78,16 @@ export default function App() {
   ];
 
   const partnerLabels = [
-    "대학교 면접",
-    "공공기관 특강",
-    "기업 교육",
-    "청년센터",
-    "커리어센터",
-    "입시 컨설팅",
-    "아카데미 협업",
-    "학교 출강",
-    "기관 발표 교육",
-    "프레젠테이션 코칭",
+    ["UNIV", "대학교 면접"],
+    ["PUBLIC", "공공기관 특강"],
+    ["COMPANY", "기업 교육"],
+    ["CAREER", "청년센터"],
+    ["CAMPUS", "커리어센터"],
+    ["ADMISSION", "입시 컨설팅"],
+    ["ACADEMY", "아카데미 협업"],
+    ["SCHOOL", "학교 출강"],
+    ["PRESENT", "기관 발표 교육"],
+    ["SPEECH", "프레젠테이션 코칭"],
   ];
 
   const strengths = [
@@ -507,27 +507,6 @@ export default function App() {
         </>
       ) : (
         <>
-          <section className="border-b border-slate-100 bg-white py-3">
-            <div className="mx-auto flex max-w-7xl items-center gap-5 overflow-hidden px-5 lg:px-8">
-              <div className="flex shrink-0 items-center gap-2 rounded-full bg-[#0e2442] px-4 py-2 text-sm font-extrabold text-white">
-                <Handshake size={16} />
-                연계·출강 분야
-              </div>
-              <div className="dday-marquee flex min-w-0 flex-1 overflow-hidden">
-                <div className="dday-marquee-track flex shrink-0 items-center gap-3">
-                  {[...partnerLabels, ...partnerLabels].map((label, index) => (
-                    <span
-                      key={`${label}-${index}`}
-                      className="rounded-full border border-slate-100 bg-[#f8fbff] px-4 py-2 text-sm font-bold text-slate-600 shadow-sm"
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
           <section id="home" className="relative px-5 pb-20 pt-16 sm:pt-20 lg:px-8 lg:pb-28">
             <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-sky-50 to-transparent" />
             <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1fr]">
@@ -609,6 +588,45 @@ export default function App() {
                   <p className="mt-3 text-sm leading-6 text-slate-500">{text}</p>
                 </article>
               ))}
+            </div>
+          </section>
+
+          <section className="bg-white px-5 pb-20 pt-2 lg:px-8">
+            <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-slate-100 bg-[#fbfdff] py-7 shadow-xl shadow-slate-100">
+              <div className="mb-5 flex items-center justify-between gap-4 px-6 sm:px-8">
+                <div className="flex items-center gap-3">
+                  <span className="flex size-11 items-center justify-center rounded-2xl bg-[#0e2442] text-white">
+                    <Handshake size={20} />
+                  </span>
+                  <div>
+                    <p className="text-sm font-extrabold text-sky-600">PARTNERSHIP</p>
+                    <h2 className="text-xl font-extrabold text-[#0e2442]">연계 기관 · 기업</h2>
+                  </div>
+                </div>
+                <p className="hidden max-w-md text-sm font-semibold leading-6 text-slate-500 md:block">
+                  면접 · 발표 · 커뮤니케이션 교육으로 이어지는 다양한 협업
+                </p>
+              </div>
+              <div className="dday-marquee">
+                <div className="dday-marquee-track dday-logo-track flex w-max items-center gap-4">
+                  {[...partnerLabels, ...partnerLabels].map(([mark, label], index) => (
+                    <div
+                      key={`${mark}-${index}`}
+                      className="dday-logo-card flex h-20 min-w-48 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 shadow-lg shadow-slate-100"
+                    >
+                      <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-50 to-teal-50 text-sm font-black text-[#0e2442]">
+                        {mark.slice(0, 2)}
+                      </span>
+                      <span>
+                        <b className="block text-lg font-black tracking-normal text-[#0e2442]">
+                          {mark}
+                        </b>
+                        <span className="text-sm font-bold text-slate-500">{label}</span>
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 
