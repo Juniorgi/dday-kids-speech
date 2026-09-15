@@ -27,6 +27,11 @@ body {
   animation: dday-marquee 54s linear infinite;
 }
 
+.dday-marquee-track-reverse {
+  animation-direction: reverse;
+  animation-duration: 62s;
+}
+
 .dday-logo-track {
   padding-inline: 1.5rem;
 }

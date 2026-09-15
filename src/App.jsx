@@ -83,6 +83,14 @@ export default function App() {
       src: "https://www.seoul.go.kr/res_newseoul/images/common/brand-seoulmysoul.png",
     },
     {
+      name: "은평구",
+      src: "/partner-logos/eunpyeong-gu.png",
+    },
+    {
+      name: "강북구",
+      src: "/partner-logos/gangbuk-gu.png",
+    },
+    {
       name: "성동구",
       src: "https://www.sd.go.kr/site/main/images/common/svg_logo.svg",
     },
@@ -95,8 +103,20 @@ export default function App() {
       src: "https://www.gangnam.go.kr/assets/images/contents/04/040401_img05.png",
     },
     {
+      name: "강북구의회",
+      src: "/partner-logos/gangbuk-district-council.png",
+    },
+    {
+      name: "동작구",
+      src: "/partner-logos/dongjak-gu.png",
+    },
+    {
       name: "경기도",
       src: "https://www.gg.go.kr/site/gg/common/img/img-header-logo_v20260629_1.png",
+    },
+    {
+      name: "울산광역시",
+      src: "/partner-logos/ulsan-metropolitan-city.png",
     },
     {
       name: "대구광역시",
@@ -111,17 +131,53 @@ export default function App() {
       src: "https://www.suwon.go.kr/resources/web/www_2025/images/common/logo.png",
     },
     {
+      name: "천안시",
+      src: "/partner-logos/cheonan-city.png",
+    },
+    {
+      name: "화성시",
+      src: "/partner-logos/hwaseong-city.png",
+    },
+    {
       name: "용산구",
       src: "https://www.yongsan.go.kr/static/portal/img/main2026/logo.png",
     },
     {
-      name: "호서대학교",
-      src: "https://www.hoseo.ac.kr/resources/images/korean/common/logo.png",
+      name: "노량진 청년일자리센터",
+      src: "/partner-logos/noryangjin-youth-job-center.png",
     },
     {
-      name: "KG그룹",
-      src: "https://kgdev.cafe24.com/images/sub/img-kg-ci-logo-type-txt.png",
+      name: "서울청년센터",
+      src: "/partner-logos/seoul-youth-center.png",
     },
+    {
+      name: "서울청년센터 은평",
+      src: "/partner-logos/eunpyeong-youth-center.png",
+    },
+    {
+      name: "서울청년센터 금천",
+      src: "/partner-logos/geumcheon-youth-center.png",
+    },
+    {
+      name: "서울청년센터 성동",
+      src: "/partner-logos/seongdong-youth-center.png",
+    },
+    {
+      name: "파주청년공간 GP1939",
+      src: "/partner-logos/paju-youth-space-gp1939.png",
+    },
+    {
+      name: "인천만석초등학교",
+      src: "/partner-logos/incheon-manseok-elementary-school.png",
+    },
+    {
+      name: "서울유스호스텔",
+      src: "/partner-logos/seoul-youth-hostel.png",
+    },
+  ];
+  const partnerLogoRows = [
+    partnerLogos.filter((_, index) => index % 2 === 0),
+    partnerLogos.filter((_, index) => index % 2 === 1),
   ];
 
   const strengths = [
@@ -641,22 +697,30 @@ export default function App() {
                   면접 · 발표 · 커뮤니케이션 교육으로 이어지는 다양한 협업
                 </p>
               </div>
-              <div className="dday-marquee">
-                <div className="dday-marquee-track dday-logo-track flex w-max items-center gap-4">
-                  {[...partnerLogos, ...partnerLogos].map(({ name, src }, index) => (
+              <div className="space-y-4">
+                {partnerLogoRows.map((row, rowIndex) => (
+                  <div className="dday-marquee" key={`partner-row-${rowIndex}`}>
                     <div
-                      key={`${name}-${index}`}
-                      className="dday-logo-card flex h-24 min-w-60 items-center justify-center rounded-2xl border border-slate-100 bg-white px-6 shadow-lg shadow-slate-100"
+                      className={`dday-marquee-track dday-logo-track flex w-max items-center gap-4 ${
+                        rowIndex === 1 ? "dday-marquee-track-reverse" : ""
+                      }`}
                     >
-                      <img
-                        src={src}
-                        alt={`${name} 로고`}
-                        className="max-h-12 max-w-40 object-contain"
-                      />
-                      <span className="sr-only">{name}</span>
+                      {[...row, ...row].map(({ name, src }, index) => (
+                        <div
+                          key={`${name}-${rowIndex}-${index}`}
+                          className="dday-logo-card flex h-24 min-w-60 items-center justify-center rounded-2xl border border-slate-100 bg-white px-6 shadow-lg shadow-slate-100"
+                        >
+                          <img
+                            src={src}
+                            alt={`${name} 로고`}
+                            className="max-h-12 max-w-40 object-contain"
+                          />
+                          <span className="sr-only">{name}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
